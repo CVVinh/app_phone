@@ -5,7 +5,7 @@ import App from './App';
 // import reportWebVitals from './reportWebVitals';
 import { ProductProvider } from './context';
 import { BrowserRouter as Router } from 'react-router-dom';
-
+import * as serviceWorker from './serviceWorker';
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
 //   <React.StrictMode>
@@ -27,4 +27,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-
+serviceWorker.unregister();
