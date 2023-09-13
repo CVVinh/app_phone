@@ -7,16 +7,26 @@ import { ButtonContainer } from "./Button";
 export default class Navbar extends Component {
     render() {
         return (
-            <NavWrappepr className="navbar nav-bar-expand-sm navbar-dark">
+            <NavWrapper className="navbar nav-bar-expand-sm navbar-dark px-sm-5">
                 <Link>
                     <img src={logo} alt='store' className="navbar-brand" />
                 </Link>
-            </NavWrappepr>
-        )
+                <ul className="navbar-nav align-items-center">
+                    <li className="nav-item ml-5">
+                        <Link to='/' className='nav-link'>Products</Link>
+                    </li>
+                </ul>
+                <Link to='/cart' className='ml-auto'>
+                    <ButtonContainer>
+                        <i className="fas fa-cart-plus"> My Cart</i>
+                    </ButtonContainer>
+                </Link>
+            </NavWrapper>
+        );
     }
 }
 
-const NavWrappepr = styled.nav`
+const NavWrapper = styled.nav`
 background:var(--mainBlue);
 .nav-link{
     color:var(--mainWhite) !important;

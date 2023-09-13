@@ -1,6 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
-import Navbar from './components/Navbar';
+// import logo from './logo.svg';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "./components/Navbar";
+import ProductList from "./components/ProductList";
 
 // function App() {
 //   return (
@@ -25,10 +29,14 @@ import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <>
-      <Navbar/>
-      
-    </>
+    <React.Fragment>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<ProductList />} />
+
+        {/* <Route path="*" element={<NotFound />} /> */}
+      </Routes>
+    </React.Fragment>
   );
 }
 
