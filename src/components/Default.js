@@ -2,10 +2,6 @@ import React, { Component } from "react";
 
 export default class Default extends Component {
   render() {
-    /* The line `console.log(this.props);` is logging the value of the `props` object to the console.
-    This can be helpful for debugging and understanding the data that is being passed to the
-    component. */
-
     return (
       <div className="container mt-5">
         <div className="row">
